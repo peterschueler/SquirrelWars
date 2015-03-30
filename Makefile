@@ -6,4 +6,4 @@ build: $(FILES)
 		$(CC) -o $(OUT) $(FILES)
 
 clean:
-	rm -f *.o
+	rm -f *.o $(OUT)
