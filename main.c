@@ -17,37 +17,21 @@
 #define SHORT_TEXT_LENGTH 256
 #define LONG_TEXT_LENGTH 500
 
-void displayFormattedOptionsForEvent(WorldEvent *event) {
-  char *responsesString = malloc(strlen(event->responses[0].displayText)
-                                + strlen(event->responses[1].displayText)
-                                + strlen(event->responses[2].displayText)
-                                + strlen(event->responses[3].displayText));
-  if (strcmp(event->responses[0].displayText, "") || event->responses[0].displayText == NULL) {
-    strcpy(responsesString, "\n\n1. ");
-    strcat(responsesString, event->responses[0].displayText);
-    strcat(responsesString, "\n");
-  }
-  if (strcmp(event->responses[1].displayText, "") || event->responses[0].displayText == NULL) {
-    strcat(responsesString, "2. ");
-    strcat(responsesString, event->responses[1].displayText);
-    strcat(responsesString, "\n");
-  }
-  if (strcmp(event->responses[2].displayText, "") || event->responses[0].displayText == NULL) {
-    strcat(responsesString, "3. ");
-    strcat(responsesString, event->responses[2].displayText);
-    strcat(responsesString, "\n");
-  }
-  if (strcmp(event->responses[2].displayText, "") || event->responses[0].displayText == NULL) {
-    strcat(responsesString, "4. ");
-    strcat(responsesString, event->responses[3].displayText);
-  }
-  strcat(responsesString, "\n");
-  strcat(responsesString, "=> ");
+WorldEvent *lookupTable;
+WorldEvent *currentEvent;
 
+void displayFormattedOptionsForEvent(WorldEvent *event) {
   printf(ANSI_COLOR_GREEN "...> %s\n", event->text);
-  printf(ANSI_COLOR_RESET " ");
-  printf("%s", responsesString);
-//  printf(ANSI_COLOR_RESET " ");
+
+	printf(ANSI_COLOR_RESET "\n\n");
+
+  if (event->responses != NULL) {
+      for (int i=0; i<event->responseCount; i++) {
+         if (event->responses[i].displayText != NULL) {
+           printf("%u. %s\n", i+1, event->responses[i].displayText);
+         }
+     }
+   }
 }
 
 void opening() {
@@ -89,14 +73,19 @@ void theEnd() {
   exit(1);
 }
 
-// I need a lookup table "Fetch event for [index][response]
-WorldEvent *lookupTable;
+void goodbye() {
+	printf("Good bye, Desctructor of Worlds. See you at the reboot crossover.\n");
+}
 
 WorldEvent* processInputForEvent(WorldEvent *event) {
   char input[256];
   if (fgets(input, sizeof(input), stdin)) {
     int number;
     if (sscanf(input, "%d", &number) == 1) {
+	  if(number == 7) {
+	    goodbye();
+	    exit(0);
+	  }
       if (event->primaryResponse == number) {
         if (event->primaryTableLookupNumber == 333) {
           theEnd();
@@ -125,8 +114,6 @@ WorldEvent* processInputForEvent(WorldEvent *event) {
   return NULL;
 }
 
-WorldEvent *currentEvent;
-
 int gameloop(WorldEvent* nextEvent) {
   displayFormattedOptionsForEvent(nextEvent);
 
@@ -151,7 +138,12 @@ void startGame() {
 }
 
 void initLookupTable() {
-  lookupTable = malloc(sizeof(WorldEvent));
+  lookupTable = malloc(sizeof(WorldEvent)*350);
+  lookupTable->text = malloc(sizeof(char)*8192);
+  lookupTable->responses = malloc(sizeof(SimpleObject)*6);
+  for (int i=0; i<5;i++) {
+  	lookupTable->responses[i].displayText = malloc(sizeof(char)*1024);
+	}
   memcpy(&lookupTable[100], deadOne(), sizeof(WorldEvent));
   memcpy(&lookupTable[101], deadTwo(), sizeof(WorldEvent));
   memcpy(&lookupTable[102], deadThree(), sizeof(WorldEvent));
@@ -200,6 +192,8 @@ void initLookupTable() {
   memcpy(&lookupTable[198], castleNineteen(), sizeof(WorldEvent));
   memcpy(&lookupTable[199], castleTwenty(), sizeof(WorldEvent));
 
+  memcpy(&lookupTable[205], castleOneHalf(), sizeof(WorldEvent));
+
   memcpy(&lookupTable[300], hauntedMallOne(), sizeof(WorldEvent));
   memcpy(&lookupTable[301], hauntedMallTwo(), sizeof(WorldEvent));
   memcpy(&lookupTable[302], hauntedMallThree(), sizeof(WorldEvent));
@@ -230,8 +224,8 @@ start:
         getchar();
         printf("\n\n\n\n\n\n\n");
         goto start;
-      } else if (number == 3) {
-        printf("Okay. Good bye. See you soon.\n");
+      } else if (number == 3 || number == 7) {
+        goodbye();
         return 0;
       } else if (number == 4) {
         // TODO: REMOVE THIS HIDDEN CHEAT CODE FROM FINISHED GAME!

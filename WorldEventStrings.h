@@ -130,7 +130,7 @@ static char* HIDDEN_TWO                 = "Bring me to your Squirrel Overlords";
 static char* INTERFACE_WELCOME          = "Welcome to 'In Search of the Squirrel Wars'!\nHere are a few options to consider:\n";
 static char* INTERFACE_RESTART          = "Restart Game";
 static char* INTERFACE_NEWGAME          = "Start a New Game";
-static char* INTERFACE_EXIT             = "Exit";
+static char* INTERFACE_EXIT             = "Exit (you can always do that by hitting 7)";
 static char* INTERFACE_SAVEGAME         = "Save Game";
 static char* INTERFACE_LOADGAME         = "Bother me about implementing Save Games"; // "Load Game"
 
@@ -153,7 +153,7 @@ static char* WORLDTEXT_DEAD_NINE         = "Of course! I don't know about this w
 #pragma mark - WORLD TEXT - DESCRIPTIONS
 static char* WORLD_DESCRIPTION_ONE      = "You are walking on a narrow road. Trees are to the left and right of you. Placeholder Name Four is humming Sussudio by Phil Collins.";
 static char* WORLD_DESCRIPTION_TWO      = "You have entered the city. People a bustling about. You also see a forrest on the far left. It looks dangerous. There is a sign: Don't enter under any circumstances! It's dangerous.";
-static char* WORLD_DESCRIPTION_THREE    = "Yes, we really are in the city. Look around There's a man over there. He's doing city type stuff. Going to and fro the office and whatnot. It's a gleaming beacon of hope, this one.";
+static char* WORLD_DESCRIPTION_THREE    = "Yes, we really are in the city. Look around. There's a man over there. He's doing city type stuff. Going to and fro the office and whatnot. It's a gleaming beacon of hope, this one.";
 static char* WORLD_DESCRIPTION_FOUR     = "Yes, and there's like this guy, who would...I'm sorry. The commute between where I found you and the temple is really quite boring. I thought I'd spruce it up a bit.";
 
 static char* DESCRIPTION_BUILD_DISTANCE = "You see buildings in the far distance.";
@@ -163,7 +163,7 @@ static char* DESCRIPTION_FORREST        = "You see a forrest. It looks dangerous
 
 static char* DESCRIPTION_TEMPLE_DISTANCE= "You see the temple in the distance. The roof is glistening against the burning sun.";
 static char* DESCRIPTION_TEMPLE_CLOSER  = "You are approaching the temple. It is even bigger than you thought.";
-static char* DESCRIPTION_TEMPLE_FRONT   = "You start running, Placeholder can't keep up. Before you know it, you are standing in front of the temple. The door is surprisingly small. Like, tiny. Fortuantely, you are a small rodent of some sort. A mouse, maybe. Or a duck. Is that rodent? Who knows these things? Use Wikipedia.";
+static char* DESCRIPTION_TEMPLE_FRONT   = "You start running, Placeholder can't keep up. Before you know it, you are standing in front of the temple. The door is surprisingly small. Like, tiny. Fortuantely, you are a small rodent of some sort. A mouse, maybe. Or a duck. Is that a rodent? Who knows these things? Use Wikipedia.";
 
 static char* DESCRIPTION_CASTLE_DISTANCE= "You leave the temple. The castle is basically just outside the door and stuff. You don't have to walk far, is what I'm trying to say.";
 static char* DESCRIPTION_CASTLE_DIST_1  = "You didn't see it before, because...Why, do I have to have an answer for everything? Besides, you could've shown more initiative!";
@@ -182,7 +182,7 @@ static char* DESCRIPTION_CASTLE_THRONE_1= "You walk past a bunch of hipsters lou
 
 #pragma mark - WORLD TEXT - CHARACTERS
 static char* CHAR_ELDER_STEREO_ONE      = "Hello, what a pleasent surprise for you to come by! Come in, come in! This is such great news.";
-static char* CHAR_ELDER_STEREO_TWO      = "Yes, I am lonely. Very, loney";
+static char* CHAR_ELDER_STEREO_TWO      = "Yes, I am lonely. Very, very loney.";
 static char* CHAR_ELDER_STEREO_THREE    = "Oh yes, the 'Squirrel Wars' Of course, of course. \nNever heard of those. But I do detest them. The squirrels, I mean. Buggers stole my lunch three days in a row. No respect. \nIn my day, people would never steal from an owl.  \nEspecially an Elder one.";
 static char* CHAR_ELDER_STEREO_FOUR     = "The future, you say? I've been there once or twice, but I don't remember meeting you there. Is your friend also from the future?";
 static char* CHAR_ELDER_STEREO_FIVE     = "Just met him? And you trust him?";

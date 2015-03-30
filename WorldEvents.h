@@ -49,6 +49,7 @@ WorldEvent* elderEleven();
 #pragma mark - LOOKUP NUMBERS - 180:200
 
 WorldEvent* castleOne();
+WorldEvent* castleOneHalf();
 WorldEvent* castleTwo();
 WorldEvent* castleThree();
 WorldEvent* castleFour();

@@ -33,7 +33,7 @@ typedef enum {
 // shortcut to get this game done
 typedef struct SimpleObject {
   char shortText[50];
-  char displayText[256];
+  char *displayText;
 } SimpleObject;
 
 typedef struct Player {
@@ -60,8 +60,10 @@ typedef struct WorldEvent {
   int tertiaryResponse;
   int tertiaryTableLookupNumber;
 
-  SimpleObject responses[6];
-  char text[1024];
+  int responseCount;
+
+  SimpleObject *responses;
+  char *text;
 } WorldEvent;
 
 #endif
