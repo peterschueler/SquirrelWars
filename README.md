@@ -9,3 +9,7 @@ For more info about the Random Name Jam: http://lnwdr.github.io/random-name-jam/
 
 ## Installation
 Linux & Mac: Use the makefile. It should compile without problems.
+
+### Detailed Installation
+If you don't know what a makefile is (mostly applies to Mac users, I guess):
+Download the Zip (on the right). Unpack it to a folder of your choosing. ("/Users/<yourusername>/Downloads/SquirrelWars-master", for instance) Launch your Terminal/Console (on Mac: type Terminal.app into Spotlight). Navigate to your folder (type cd "/Users/<yourusername>/Downloads/SquirrelWars-master", for instance). Type make. Wait .5 seconds. (on Mac: you might have to download the Developer Command Line Tools, which will make the waiting time longer.) Then type ./SquirrelWars. That should do it. :)
