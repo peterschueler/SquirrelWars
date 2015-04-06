@@ -134,7 +134,7 @@ static char* INTERFACE_EXIT             = "Exit (you can always do that by hitti
 static char* INTERFACE_SAVEGAME         = "Save Game";
 static char* INTERFACE_LOADGAME         = "Bother me about implementing Save Games"; // "Load Game"
 
-#pragma mark - EDITOR'S NOTES
+#pragma mark - EDITORS NOTES
 static char* EDITOR_PLEASEDONTSUEME     = "(Please don't sue-sue-sue us. - Editor)";
 static char* EDITOR_SEEALSO_ONE         = "(See also last issue. - Editor)";
 static char* EDITOR_SEEALSO_TWO         = "(In the sequel. Coming soon! - Editor)";
@@ -176,7 +176,7 @@ static char* DESCRIPTION_CASTLE_CLOSER_1= "You want to move on with the adventur
                                            I put a lot of effort into narrating this thing for you.";
 static char* DESCRIPTION_CASTLE_CLOSER_2= "Now I don't to anymore. Just go in.";
 
-static char* DESCRIPTION_CASTLE_THRONE  = "While the narrator keeps extolling the virtues of freedom, thh large doors open up and you peek into the throne room. It has all kinds of throny throne things in it. The king is sitting at the far end of the room, waving you to come in. A overmotivated guard stops you, though.";
+static char* DESCRIPTION_CASTLE_THRONE  = "While the narrator keeps extolling the virtues of freedom, the large doors open up and you peek into the throne room. It has all kinds of throny throne things in it. The king is sitting at the far end of the room, waving you to come in. A overmotivated guard stops you, though.";
 static char* DESCRIPTION_CASTLE_THRONE_1= "You walk past a bunch of hipsters lounging about in the throne room, keeping your eyes on the king. Placeholder shuffles uncomfortable next to you. The King is waiting for you.";
 
 
@@ -233,7 +233,7 @@ static char* CASTLE_PLACEHOLDER_TWO     = "It was. But you know what? Fuck 'em. 
 static char* CASTLE_KING_NINE           = "Exactly. And on that note: You are about to be executed for treason. Calling up war like that. Shame on you!";
 
 static char* CASTLE_DESCRIPTION_RUN     = "You run for the door, which magically disappears in front of your eyes."; // you remember your key
-static char* CASTLE_KEY                 = "yes, the key. You open the portal to the nth dimension and enter a strage new world. There is color here, there is sound. You have crossed over into the WARNING! THIS IS NOT SUPPOSED TO HAPPEN! RUN, RUN LIKE YOU ARE HUNTED BY THE DEVIL! GET AWAY FROM YOUR COMPUTER! IT'S ABOUT TO EXPLO";
+static char* CASTLE_KEY                 = "yes, the key. You open the portal to the nth dimension and enter a strange new world. There is color here, there is sound. You have crossed over into the WARNING! THIS IS NOT SUPPOSED TO HAPPEN! RUN, RUN LIKE YOU ARE HUNTED BY THE DEVIL! GET AWAY FROM YOUR COMPUTER! IT'S ABOUT TO EXPLO";
 static char* SPACE_ONE                  = "...\n....\n......\n.......\n";
 static char* SPACE_FINALFRONTIER        = "Space. The Final Frontier. These are the adventures of Heroine and Placeholder Name Four. There five minute mission: Find new allies to fight the 'Squirrel Wars' Make sure no one stays alive. And to boldly go, where so many narratives have gone before. ";
 static char* SPACE_FINALFRONTIER_ADD    = "I think they succeded. Blowing up the Earth is no mean feat. But is this end for our plucky heroes? Have we seen the last of them? Are the 'Squirrel Wars' even real? Find out next week. \n... ...\n";                                    

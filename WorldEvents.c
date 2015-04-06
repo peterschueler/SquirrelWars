@@ -1004,7 +1004,7 @@ WorldEvent *castleSeven() {
 WorldEvent *castleEight() {
   SimpleObject responseThree;
   responseThree.displayText = malloc(sizeof(char)*1024);
-  memccpy(responseThree.displayText, "Listen. I'm from the future. Let me pass if you want to live.", 0, sizeof(char[56]));
+  memccpy(responseThree.displayText, "Listen. I'm from the future. Let me pass if you want to live.", 0, sizeof(char[128]));
 
   SimpleObject responseTwo;
   responseTwo.displayText = malloc(sizeof(char)*1024);
@@ -1032,15 +1032,15 @@ WorldEvent *castleEight() {
 WorldEvent *castleNine() {
   SimpleObject responseOne;
   responseOne.displayText = malloc(sizeof(char)*1024);
-  memccpy(responseOne.displayText, CASTLE_GUARD_RIDDLE_A_1, 0, sizeof(char[48]));
+  memccpy(responseOne.displayText, CASTLE_GUARD_RIDDLE_A_1, 0, sizeof(char[1024]));
 
   SimpleObject responseTwo;
   responseTwo.displayText = malloc(sizeof(char)*1024);
-  memccpy(responseTwo.displayText, CASTLE_GUARD_RIDDLE_A_2,  0, sizeof(char[128]));
+  memccpy(responseTwo.displayText, CASTLE_GUARD_RIDDLE_A_2,  0, sizeof(char[1024]));
 
   SimpleObject responseThree;
   responseThree.displayText = malloc(sizeof(char)*1024);
-  memccpy(responseTwo.displayText, CASTLE_GUARD_RIDDLE_A_3,  0, sizeof(char[48]));
+  memccpy(responseTwo.displayText, CASTLE_GUARD_RIDDLE_A_3,  0, sizeof(char[1024]));
 
 
   SimpleObject options[] = { responseOne, responseTwo, responseThree };
